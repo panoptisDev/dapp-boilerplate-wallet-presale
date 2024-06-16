@@ -2,8 +2,7 @@ nvm use 20.12.2
 
 yarn dev
 ![Image description](./public/1122.png)
-![Image description](./public/1133.png)
-![Image description](./public/1144.png)
+
 RPC:https://polygon-amoy.drpc.org	
 
 ### ETH price API
