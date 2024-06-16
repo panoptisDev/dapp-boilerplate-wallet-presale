@@ -22,17 +22,17 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center w-full min-h-screen text-white bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900">
         <div className="max-w-2xl p-8 mx-auto text-center">
           <h1 className="mb-4 text-5xl font-bold">
-            Welcome to ForeCaster Betting Pool
+            Welcome to Shape Token Presale
           </h1>
           <p className="mb-8 text-xl">
-            Predict the future of crypto prices and win big rewards! Connect your wallet to get started.
+            Join the Shape Token Presale to get your Token now!
           </p>
           <div className="flex items-center justify-center mb-8">
-            <img src="/img/fortuneteller.jpg" alt="Futuristic Concept" className="w-[300px] h-[300px] rounded-lg shadow-lg" />
+            <img src="/img/presale.webp" alt="Futuristic Concept" className="w-[300px] h-[300px] rounded-lg shadow-lg" />
           </div>
           <div>
-          <a href="/betting" className="inline-block px-6 py-3 text-lg font-semibold text-white transition-transform transform border border-white border-solid rounded-full bg-primary hover:scale-105">
-              Start Betting Now
+          <a href="/presale" className="inline-block px-6 py-3 text-lg font-semibold text-white transition-transform transform border border-white border-solid rounded-full bg-primary hover:scale-105">
+              To Presale
             </a>
           </div>
         </div>
