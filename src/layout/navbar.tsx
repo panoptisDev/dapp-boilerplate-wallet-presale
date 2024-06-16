@@ -26,7 +26,7 @@ export default function NavBar() {
         <Link href="/">
           <div className="flex items-center py-4 pr-4">
             <Image src="/img/clove4.svg" alt="logo" width={50} height={50} />
-            <span className="ml-2 text-3xl">ForeCaster</span>
+            <span className="ml-2 text-3xl">Token Presale</span>
           </div>
         </Link>
         <div className="flex items-center md:hidden">
@@ -70,9 +70,9 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="px-2 py-2 md:py-0">
-              <Link href="/bet2">
+              <Link href="/swap">
                 <span className="block text-lg font-medium text-black dark:text-white">
-                  Bet2
+                  Swap
                 </span>
               </Link>
             </li>

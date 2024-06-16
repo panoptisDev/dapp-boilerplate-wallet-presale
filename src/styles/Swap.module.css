@@ -1,0 +1,47 @@
+.swapContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #3c0a67;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #ff105f, #ffad06);
+  border-image-slice: 1;
+  height: auto;
+  min-height: 80vh;
+}
+
+.swapButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.swapButton:hover {
+  background-color: #45a049;
+}
+
+.swapInput {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.swapSection {
+  margin-top: 2rem;
+  background-color: #818181;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.swapSection h2 {
+  margin-bottom: 1rem;
+}

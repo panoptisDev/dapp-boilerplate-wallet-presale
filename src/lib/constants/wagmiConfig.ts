@@ -127,6 +127,7 @@ export const wagmiConfig = getDefaultConfig({
     arbitrum,
     base,
     zora,
+    sepolia,
     polygonAmoy,
 
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia, polygonAmoy] : []),
@@ -138,6 +139,7 @@ export const wagmiConfig = getDefaultConfig({
     [arbitrum.id]: http(),
     [base.id]: http(),
     [zora.id]: http(),
+    [sepolia.id]: http(),
     [polygonAmoy.id]: http(),
   },
   ssr: true, // If your dApp uses server side rendering (SSR)
