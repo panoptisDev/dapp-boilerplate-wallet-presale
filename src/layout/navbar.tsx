@@ -25,8 +25,8 @@ export default function NavBar() {
       <nav className="flex items-center justify-between mx-auto">
         <Link href="/">
           <div className="flex items-center py-4 pr-4">
-            <Image src="/img/clove4.svg" alt="logo" width={50} height={50} />
-            <span className="ml-2 text-3xl">Token Presale</span>
+            <Image src="/img/shape_logo.png" alt="logo" width={50} height={50} />
+            <span className="ml-2 text-3xl">Shape Token Presale</span>
           </div>
         </Link>
         <div className="flex items-center md:hidden">
@@ -52,6 +52,13 @@ export default function NavBar() {
               <Link href="/betting">
                 <span className="block text-lg font-medium text-black dark:text-white">
                   Betting
+                </span>
+              </Link>
+            </li>
+            <li className="px-2 py-2 md:py-0">
+              <Link href="/presale">
+                <span className="block text-lg font-medium text-black dark:text-white">
+                  Presale
                 </span>
               </Link>
             </li>

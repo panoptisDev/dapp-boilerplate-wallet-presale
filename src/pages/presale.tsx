@@ -1,25 +1,21 @@
-Smart Contract:
-
-TokenPresale replaces EthSwap.
-The presale period is set to 60 days.
-The rate is 1000 TKN per ETH for the first 30 days and 800 TKN per ETH for the remaining period.
-The buyTokens function allows users to buy tokens.
-The getRate function provides the current rate based on the elapsed time.
----
-frontend
------
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
+import styles from '../styles/Presale.module.css';
+import { Contract } from 'web3-eth-contract';
+const ethLogo = "/img/eth-logo.png";
+const tokenLogo = "/img/token-logo.png";
 
 const TokenPresale = () => {
-    const [web3, setWeb3] = useState(null);
+    const [web3, setWeb3] = useState<Web3 | null>(null);
     const [account, setAccount] = useState('');
     const [ethAmount, setEthAmount] = useState('');
-    const [presaleContract, setPresaleContract] = useState(null);
+    const [presaleContract, setPresaleContract] = useState<Contract | null>(null);
     const [rate, setRate] = useState(0);
 
-    const presaleContractAddress = 'YOUR_CONTRACT_ADDRESS';
-    const presaleContractABI = [/* YOUR_CONTRACT_ABI */];
+    const presaleContractAddress = '0xE9d667b42F94907fD39296c177e8aB0f4e3033a8';
+    const presaleAbi = require('../abis/TokenPresale.json').abi;
+    const tokenContractAddress = '0x763F016d03eEa2653debB688D15C80583A6421E1';
+    const tokenContractABI = require('../abis/Token.json').abi;
 
     useEffect(() => {
         const init = async () => {
@@ -30,7 +26,7 @@ const TokenPresale = () => {
                 const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                 setAccount(accounts[0]);
 
-                const presaleContractInstance = new web3Instance.eth.Contract(presaleContractABI, presaleContractAddress);
+                const presaleContractInstance = new web3Instance.eth.Contract(presaleAbi, presaleContractAddress);
                 setPresaleContract(presaleContractInstance);
 
                 const currentRate = await presaleContractInstance.methods.getRate().call();
@@ -43,7 +39,7 @@ const TokenPresale = () => {
     }, []);
 
     const handleBuyTokens = async () => {
-        if (presaleContract && account) {
+        if (presaleContract && account && web3) {
             try {
                 await presaleContract.methods.buyTokens().send({ from: account, value: web3.utils.toWei(ethAmount, 'ether') });
                 alert('Tokens purchased successfully!');
@@ -55,20 +51,19 @@ const TokenPresale = () => {
     };
 
     return (
-        <div>
-            <button onClick={() => window.ethereum.request({ method: 'eth_requestAccounts' })}>
-                Connect Wallet
-            </button>
-            <div>
-                <h2>Buy Tokens</h2>
+        <div className={styles.presaleContainer}>
+            <div className={styles.purchaseSection}>
+                <h2 className={styles.heading}>Buy Shape Tokens</h2>
+                <h2 className={styles.smallHeading}>Enter how much eth you like to spend</h2>
                 <input
+                    className={styles.input}
                     type="text"
                     placeholder="ETH Amount"
                     value={ethAmount}
                     onChange={(e) => setEthAmount(e.target.value)}
                 />
-                <p>Current Rate: {rate} TKN per ETH</p>
-                <button onClick={handleBuyTokens}>Buy</button>
+                <p className={styles.rate}>Current Rate: {rate} TKN per ETH</p>
+                <button className={styles.buyButton} onClick={handleBuyTokens}>Buy</button>
             </div>
         </div>
     );
