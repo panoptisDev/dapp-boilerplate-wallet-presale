@@ -1,0 +1,74 @@
+/* betting.css */
+
+.betting-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+  
+.header {
+  margin-bottom: 20px;
+}
+  
+.prediction-input {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  width: calc(100% - 22px); /* Account for padding and border */
+  box-sizing: border-box;
+}
+  
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+  
+.period-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: background-color 0.3s;
+}
+  
+.period-button:hover {
+  background-color: #0056b3;
+}
+  
+.submit-button {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  
+.submit-button:hover {
+  background-color: darkgreen;
+}
+/* Add this in your global CSS file or in a relevant CSS module */
+.period-button {
+  @apply px-4 py-2 mx-1 text-white transition-transform duration-200 rounded bg-primary;
+}
+
+.period-button:hover {
+  @apply scale-105;
+}
+
+.submit-button {
+  @apply px-6 py-2 mb-4 text-white transition-transform duration-200 bg-green-500 rounded;
+}
+
+.submit-button:hover {
+  @apply scale-105;
+}  
