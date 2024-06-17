@@ -2,7 +2,9 @@ nvm use 20.12.2
 
 yarn dev
 
-![Image description](./public/presalescreen.png)
+![Image description](./public/screen111.png)
+![Image description](./public/screen22.png)
+![Image description](./public/screen332.png)
 
 ## presale contract
 Token: 0x763F016d03eEa2653debB688D15C80583A6421E1
