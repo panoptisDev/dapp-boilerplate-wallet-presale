@@ -51,19 +51,21 @@ const TokenPresale = () => {
     };
 
     return (
-        <div className={styles.presaleContainer}>
-            <div className={styles.purchaseSection}>
-                <h2 className={styles.heading}>Buy Shape Tokens</h2>
-                <h2 className={styles.smallHeading}>Enter how much eth you like to spend</h2>
-                <input
-                    className={styles.input}
-                    type="text"
-                    placeholder="ETH Amount"
-                    value={ethAmount}
-                    onChange={(e) => setEthAmount(e.target.value)}
-                />
-                <p className={styles.rate}>Current Rate: {rate} TKN per ETH</p>
-                <button className={styles.buyButton} onClick={handleBuyTokens}>Buy</button>
+        <div className="flex items-center justify-center w-screen h-screen p-8 text-white bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900">
+            <div className={styles.presaleContainer}>
+                <div className={styles.purchaseSection}>
+                    <h2 className={styles.heading}>Buy Shape Tokens</h2>
+                    <h2 className={styles.smallHeading}>Enter how much eth you like to spend</h2>
+                    <input
+                        className={styles.input}
+                        type="text"
+                        placeholder="ETH Amount"
+                        value={ethAmount}
+                        onChange={(e) => setEthAmount(e.target.value)}
+                    />
+                    <p className={styles.rate}>Current Rate: {rate} TKN per ETH</p>
+                    <button className={styles.buyButton} onClick={handleBuyTokens}>Buy</button>
+                </div>
             </div>
         </div>
     );

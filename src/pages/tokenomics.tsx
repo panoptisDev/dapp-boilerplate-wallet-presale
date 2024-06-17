@@ -22,8 +22,8 @@ export default function Tokenomics() {
           Staking your tokens not only gives you a share of the betting pool revenue but also supports the stability and growth of the ForcasterToken ecosystem. We appreciate your participation and support.
         </p>
         <div className="mt-8">
-        <a href="/staking" className="inline-block px-6 py-3 text-lg font-semibold text-white transition-transform transform border border-white border-solid rounded-full bg-primary hover:scale-105">
-            Stake Your Tokens
+        <a href="/presale" className="inline-block px-6 py-3 text-lg font-semibold text-white transition-transform transform border border-white border-solid rounded-full bg-primary hover:scale-105">
+            To Presale
           </a>
         </div>
       </div>

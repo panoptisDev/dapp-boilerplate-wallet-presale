@@ -49,13 +49,6 @@ export default function NavBar() {
         >
           <ul className="flex flex-col md:flex-row md:items-center md:space-x-4">
             <li className="px-2 py-2 md:py-0">
-              <Link href="/betting">
-                <span className="block text-lg font-medium text-black dark:text-white">
-                  Betting
-                </span>
-              </Link>
-            </li>
-            <li className="px-2 py-2 md:py-0">
               <Link href="/presale">
                 <span className="block text-lg font-medium text-black dark:text-white">
                   Presale
@@ -66,20 +59,6 @@ export default function NavBar() {
               <Link href="/tokenomics">
                 <span className="block text-lg font-medium text-black dark:text-white">
                   Tokenomics
-                </span>
-              </Link>
-            </li>
-            <li className="px-2 py-2 md:py-0">
-              <Link href="/staking">
-                <span className="block text-lg font-medium text-black dark:text-white">
-                  Staking
-                </span>
-              </Link>
-            </li>
-            <li className="px-2 py-2 md:py-0">
-              <Link href="/swap">
-                <span className="block text-lg font-medium text-black dark:text-white">
-                  Swap
                 </span>
               </Link>
             </li>
